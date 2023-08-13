@@ -92,6 +92,7 @@ body {
 /* ============= PAGE HEADER ============= */
 .page-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -134,6 +135,34 @@ body {
     letter-spacing: 0.32px;
     color: var(--primary-color);
     transition: color var(--transition-dur-and-func);
+}
+
+.menu-first,
+.menu-second {
+    position: relative;
+    color: var(--accent-color);
+    }
+
+.menu-first::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 48px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.menu-second::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 66px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
 }
 
 .contacts {
@@ -217,7 +246,7 @@ body {
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
-    transition: color var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .order-service-btn:hover,
