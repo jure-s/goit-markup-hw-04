@@ -296,7 +296,13 @@ body {
 }
 
 .icon-container {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 /* ================ /BENEFITS ================ */
@@ -512,18 +518,22 @@ body {
 /* ================ MODAL WINDOW ================ */
 .modal {
     position: absolute;
-    top: 80px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%) scale(1);
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     flex-shrink: 0;
     border-radius: 4px;
     background-color: #FCFCFC;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    transition: transform var(--transition-dur-and-func);
 }
 
 .close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 24px;
     right: 24px;
@@ -532,10 +542,12 @@ body {
     line-height: 0;
     width: 24px;
     height: 24px;
-    border-radius: 100px;
+    border-radius: 50%;
     background-color: rgba(231, 233, 252, 1);
     border: 1px solid rgba(0, 0, 0, 0.10);
-    transition: color var(--transition-dur-and-func);
+    transition: fill var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func);
+    border: var(--transition-dur-and-func);
 }
 
 .close-btn:hover,
