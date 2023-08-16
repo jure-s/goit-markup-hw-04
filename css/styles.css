@@ -506,7 +506,7 @@ body {
     height: 100%;
     background-color: var(--third-color);
     border-radius: 50%;
-    transition: var(--transition-dur-and-func)
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .footer-icon-link:hover,
@@ -650,23 +650,28 @@ body {
     transition: transform var(--transition-dur-and-func);
 }
 
+.close-btn-icon {
+    transition: fill var(--transition-dur-and-func);
+}
+
 .close-btn {
     display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top: 24px;
     right: 24px;
+    width: 24px;
+    height: 24px;
     fill: var(--primary-color);
     padding: 0;
     line-height: 0;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: rgba(231, 233, 252, 1);
-    background-color: var(--transition-dur-and-func);
+    background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border: var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func), border var(--transition-dur-and-func);
 }
 
 .close-btn:hover,
